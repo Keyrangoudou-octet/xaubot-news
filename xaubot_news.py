@@ -10,8 +10,8 @@ import pytz
 
 # ============================================
 
-TELEGRAM_TOKEN = “8710635829:AAG2rL4hQ5XBf17F5mn7nhiIViAO6824WRg”
-CHAT_ID = “5111483159”
+TELEGRAM_TOKEN = (8710635829:AAG2rL4hQ5XBf17F5mn7nhiIViAO6824WRg)
+CHAT_ID = (5111483159)
 
 # ============================================
 
