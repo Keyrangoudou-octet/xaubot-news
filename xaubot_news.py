@@ -35,6 +35,12 @@ def get_robot_instructions(event_title, event_time):
     elif any(kw in title_lower for kw in ["fomc", "fed rate", "interest rate", "federal funds"]):
         return "<b>FOMC DETECTE - " + event_title + "</b>\n\nBLOQUE LE ROBOT A PARTIR DE 19h30 !\n\nInstructions MT5 ce matin :\nNewsBlockHour = 20\nNewsBlockDuration = 120\n\nLe robot reprendra automatiquement a 22h00\nMouvement possible : 80-150 pips"
 
+    elif any(kw in title_lower for kw in ["powell", "fed chair"]):
+        return "<b>POWELL SPEAKS - " + event_title + "</b>\n\nSURVEILLE LE MARCHE !\n\nLe robot peut trader mais reste vigilant\nSi ca bouge fort -> coupe Algo Trading\nMouvement possible : 30-80 pips"
+
+    elif any(kw in title_lower for kw in ["trump speaks", "president trump"]):
+        return "<b>TRUMP SPEAKS - " + event_title + "</b>\n\nATTENTION IMPREVISIBLE !\n\nSurveille le marche de pres\nSi annonce importante -> coupe Algo Trading\nMouvement possible : 50-150 pips"
+    
     else:
         return "<b>NEWS USD - " + event_title + "</b>\n\nLe robot peut continuer a trader\nImpact modere, pas besoin de couper\nSurveille si grosse surprise"
 
@@ -54,6 +60,7 @@ def get_economic_news():
             "cpi", "consumer price",
             "gdp", "unemployment", "powell",
             "pce", "inflation"
+            "trump speaks", "president trump", "fed chair"
         ]
 
         result = []
