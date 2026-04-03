@@ -8,7 +8,7 @@ TELEGRAM_TOKEN = (8710635829:AAG2rL4hQ5XBf17F5mn7nhiIViAO6824WRg)
 CHAT_ID = (5111483159)
 
 def send_telegram(message):
-url = “https://api.telegram.org/bot” + TELEGRAM_TOKEN + “/sendMessage”
+url = (https://api.telegram.org/bot) + TELEGRAM_TOKEN + (/sendMessage)
 payload = {
 “chat_id”: CHAT_ID,
 “text”: message,
