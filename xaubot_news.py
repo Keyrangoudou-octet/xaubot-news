@@ -106,7 +106,7 @@ def send_daily_recap():
     send_telegram(message)
 
 def send_startup_message():
-    message = "XAUBOT NEWS BOT ACTIF !\n\nSurveillance des news USD en cours\nRecap quotidien : chaque soir a 20h\n\nJe t alerte pour :\nNFP - Journee off\nCPI - NewsBlockHour = 15\nFOMC - NewsBlockHour = 20\n\nBonne chance sur le challenge FXIFY !"
+    message = "XAUBOT NEWS BOT ACTIF !\n\nSurveillance des news USD en cours\nRecap quotidien : chaque soir a 20h\n\nJe t alerte pour :\nNFP - Journee off\nCPI - NewsBlockHour = 15\nFOMC - NewsBlockHour = 20\nPowell Speaks - Surveille le marche\nTrump Speaks - Attention danger !\n\nBonne chance sur le challenge FXIFY !"
     send_telegram(message)
 
 def main():
@@ -114,7 +114,7 @@ def main():
 
     send_startup_message()
 
-    schedule.every().day.at("20:00").do(send_daily_recap)
+    schedule.every().day.at("18:00").do(send_daily_recap)
 
     send_daily_recap()
 
