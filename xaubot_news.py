@@ -3,24 +3,24 @@ import schedule
 import time
 from datetime import datetime, timedelta
 
-TELEGRAM_TOKEN = (8710635829:AAG2rL4hQ5XBf17F5mn7nhiIViAO6824WRg)
-CHAT_ID = (5111483159)
+TELEGRAM_TOKEN = '8710635829:AAG2rL4hQ5XBf17F5mn7nhiIViAO6824WRg'
+CHAT_ID = '5111483159'
 
 def send_telegram(message):
-url = ‘https://api.telegram.org/bot’ + TELEGRAM_TOKEN + ‘/sendMessage’
+url = 'https://api.telegram.org/bot' + TELEGRAM_TOKEN + '/sendMessage'
 payload = {
-‘chat_id’: CHAT_ID,
-‘text’: message,
-‘parse_mode’: ‘HTML’
+'chat_id': CHAT_ID,
+'text': message,
+'parse_mode': 'HTML'
 }
 try:
 response = requests.post(url, json=payload, timeout=10)
 if response.status_code == 200:
-print(‘Message envoye’)
+print('Message envoye')
 else:
-print(’Erreur: ’ + response.text)
+print('Erreur: ' + response.text)
 except Exception as e:
-print(’Exception: ’ + str(e))
+print('Exception: ' + str(e))
 
 def get_robot_instructions(event_title, event_time, impact):
 title_lower = event_title.lower()
