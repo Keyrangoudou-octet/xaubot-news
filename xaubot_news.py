@@ -134,7 +134,7 @@ def main():
     print("XauBot News Bot demarre...")
     send_startup_message()
 
-    schedule.every().day.at("18:00").do(send_daily_recap)
+    schedule.every().day.at("17:00").do(send_daily_recap)
 
     send_daily_recap()
     print("Bot actif")
